@@ -1,0 +1,16 @@
+{% extends 'appVideoProgramming/base.html' %}
+{% load embed_video_tags %}
+{% block title %} userVideo {% endblock %}
+
+{% block content %}
+    <h2>Видео от пользувателей</h2>
+    <p>Скидываем видео!</p>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {{ form.media }}
+        <button type="submit" class="btn btn-primary">ВЫГРУЗИТЬ НА САЙТ</button>
+    </form>
+
+{% endblock %}

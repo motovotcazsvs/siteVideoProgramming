@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Authentication {% endblock %}</title>
+</head>
+
+<body>
+    <h1>Мой видеосайт</h1>
+    <a href="{% url 'home' %}">Домашняя страница</a>
+    <a href="{% url 'userVideo' %}">Видео от пользувателей</a>
+    <hr>
+    
+    {% block content %}    
+    {% endblock %}
+</body>
+
+</html>         

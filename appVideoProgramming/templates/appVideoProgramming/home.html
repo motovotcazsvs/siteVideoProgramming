@@ -1,0 +1,19 @@
+{% extends 'appVideoProgramming/base.html' %}
+{% load embed_video_tags %}
+{% block title %} home {% endblock %}
+
+{% block content %}
+    <h2>Домашняя страница</h2>
+    <p>Welcome to my site!</p>
+
+    {% for i in obj %}
+        
+        {% video i.video '560x315' %}
+        
+        <br>
+        {% if i.redactor_text %}
+            {{ i.redactor_text | safe }}
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}
